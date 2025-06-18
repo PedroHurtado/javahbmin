@@ -1,0 +1,57 @@
+@Entity
+class Foo{
+    @Id
+    public Integer id;
+}
+@MappedSuperclass-> a la clase base
+@Transient->No permite un atributo
+
+https://thorben-janssen.com/java-records-embeddables-hibernate/
+
+@Embeddable
+public class Adress{
+
+}
+
+public class Person{
+    public Adress adress
+}
+
+public record InnerApp(String name) {
+  }
+public static class Foo{}
+
+var innerApp1 = new InnerApp("pedro");
+var innerApp2 = new InnerApp("pedro");
+var foo1 =new Foo();
+var foo2 =new Foo();
+System.out.println(foo1.equals(foo2)); //false
+System.out.println(innerApp1.equals(innerApp2)); //true
+
+@Column
+1. No soporta la tabla null
+2. Number
+@Column(nullable = false, precision = 3, scale = 2)
+
+Relaciones
+    unidireccionales
+    Factura->(1:1)->FormadePago
+    FormadePago->(1:n)->Factura
+    no las bidireccionales
+
+    Factura->FormadePago
+    ¿Quieres por alguna regla de negocio las facturas 
+    que pertenecen a una forma de pago?
+
+    formadepago = new FormadePago();
+    formadepago.facturas
+
+@OneToOne
+@OneToMay
+@ManyToMany
+
+https://www.baeldung.com/hibernate-inheritance
+
+Bloqueos
+    Optimista
+    Pesimista

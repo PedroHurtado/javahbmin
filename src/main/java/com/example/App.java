@@ -21,32 +21,12 @@ import com.example.verticalslice.features.pizza.AddPizza.Request;
  */
 public class App {
 
-    public static void main(String[] args) {
+ 
+    public static void main(String[] args) {        
+
         addIngredient();
         addPizza();
-        //addIngredient();
-        /*var session = Configuration.creatSession();          
-        var repository = Configuration.<Events,Integer>createGetRepository(session, Events.class);
-        repository.get(1);
-        //setup();
-        addPizza();
-        addIngredient();
-
-        CustomerRepository repositoy = new CustomerRepository();
-        ServiceCustomerUpdate service = new ServiceCustomerUpdate(repositoy);
-        service.update(1);        
-
-        Consumer<Object> mock = (obj)->{};
-
-        Pinguino pinguino = new Pinguino(5);
-        Aguila aguila = new Aguila(20, 100);
-        Writer.printAve(aguila, mock);
-        Writer.printAve(pinguino,(obj)->{});
-        //error de compilacion
-        //Writer.printAvVoladora(pinguino);
-        //Writer.printAvNoVoladora(aguila);
-       Writer.printAvNoVoladora(pinguino,System.out::println);
-       Writer.printAvVoladora(aguila,System.out::println);*/
+        
     }    
     public static void addPizza(){       
         

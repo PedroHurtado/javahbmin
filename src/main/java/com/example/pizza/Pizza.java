@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
@@ -19,7 +20,7 @@ public class Pizza extends EntityBase{
     private String name;   
     private String description;
     private String url;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.REMOVE)    
     private Set<Ingredient> ingredients; 
     protected Pizza(){
         super();
